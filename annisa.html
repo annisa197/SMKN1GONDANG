@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEFA SMKN 1 GONDANG - Nganjuk</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <style>
+        /* --- Global Reset dan Dasar --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light background */
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        /* --- Header dan Navigasi --- */
+        header {
+            background-color: #007bff; /* Primary Blue */
+            color: white;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 18px;
+            display: block;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- Konten Utama (Main) --- */
+        main {
+            padding-top: 70px; /* Offset untuk header fixed */
+        }
+
+        section {
+            padding: 80px 5%;
+            background-color: white;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        h2, h3 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #e9f0ff;
+            text-align: center;
+            padding: 120px 5%;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffc107; /* Warna Oranye Kontras */
+            color: #343a40;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #e0a800;
+        }
+
+        /* Kompetensi & Produk */
+        .grid-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .grid-item {
+            flex-basis: calc(33% - 20px);
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid #dee2e6;
+            transition: transform 0.3s;
+        }
+        
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item h4 {
+            color: #28a745; 
+            margin-top: 0;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Kontak Section */
+        #kontak {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            background-color: #f1f3f5;
+        }
+
+        .contact-info {
+            flex-basis: 40%;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+
+        .contact-info h4 {
+            text-align: left;
+            color: #495057;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* --- Responsif --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                position: relative; /* Non-fixed di mobile */
+                width: auto;
+            }
+            main {
+                padding-top: 0;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul li a {
+                padding: 10px 0;
+                text-align: center;
+            }
+            .grid-item, .contact-info {
+                flex-basis: 100%;
+            }
+            section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="logo">
+            <h1>TEFA SMKN 1 GONDANG</h1>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang TEFA</a></li>
+                <li><a href="#kompetensi">Kompetensi</a></li>
+                <li><a href="#produk">Produk & Jasa</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <h2>Menciptakan Inovasi, Membangun Kompetensi</h2>
+            <p>Pusat Inovasi, Produksi, dan Pembelajaran Praktis **SMKN 1 Gondang Nganjuk**.</p>
+            <a href="#produk" class="cta-button">Lihat Produk & Jasa Kami</a>
+        </section>
+
+        <section id="tentang">
+            <h3>Tentang Teaching Factory (TEFA)</h3>
+            <p>Teaching Factory adalah model pembelajaran unggulan di SMK yang mengintegrasikan pembelajaran dan produksi. Kami meniru suasana kerja industri nyata untuk menghasilkan produk atau jasa yang memiliki nilai jual. Tujuannya adalah memastikan lulusan memiliki pengalaman kerja industri sejak di bangku sekolah.</p>
+            <p style="text-align: center; font-style: italic; color: #007bff;">"Kami tidak hanya belajar teori, kami memproduksi karya nyata."</p>
+        </section>
+
+        <section id="kompetensi">
+            <h3>Kompetensi Keahlian yang Terlibat Aktif</h3>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h4>🖥️ Teknik Komputer & Jaringan (TKJ)</h4>
+                    <p>Fokus: Layanan perbaikan komputer, instalasi jaringan, dan *maintenance* sistem IT sekolah/kantor.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>💻 Rekayasa Perangkat Lunak (RPL)</h4>
+                    <p>Fokus: Pengembangan *website* profil, aplikasi inventaris sederhana, dan jasa desain grafis promosi.</p>
+                </div>
+                <div class="grid-item">
+                    <h4>🛠️ Teknik Pemesinan (TPM)</h4>
+                    <p>Fokus: Jasa bubut, *milling*, dan pembuatan komponen mekanik sederhana sesuai pesanan industri atau masyarakat.</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="produk">
+            <h3>Produk & Jasa Unggulan</h3>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/400x200?text=Instalasi+Jaringan" alt="Jasa Instalasi Jaringan">
+                    <h4>Jasa Instalasi Jaringan LAN</h4>
+                    <p>Pemasangan dan konfigurasi jaringan internal yang andal untuk kantor dan sekolah.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/400x200?text=Desain+Website" alt="Pengembangan Website">
+                    <h4>Pengembangan Website Sederhana</h4>
+                    <p>Membuat *website* statis dan blog untuk UMKM, profil perusahaan, atau kegiatan sekolah.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="https://via.placeholder.com/400x200?text=Produk+Bubut" alt="Jasa Pembuatan Komponen">
+                    <h4>Produk Komponen Bubut/Milling</h4>
+                    <p>Menerima pesanan pembuatan komponen presisi menggunakan mesin bubut dan *milling*.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <h3>Hubungi Kami / Ajukan Kerjasama</h3>
+            
+            <div class="contact-info">
+                <h4>Informasi Kontak TEFA:</h4>
+                <p>📍 Alamat: Jl. Raya Gondang - Nganjuk (Alamat SMKN 1 Gondang)</p>
+                <p>📞 Telepon: (0358) XXXX XXXX</p>
+                <p>📧 Email: tefa@smkn1gondang.sch.id</p>
+                <p>Personil: Bpk/Ibu [Nama Koordinator TEFA]</p>
+            </div>
+            
+            <div class="contact-info">
+                <h4>Waktu Pelayanan:</h4>
+                <p>Senin - Jumat, Pukul 08:00 - 15:00 WIB</p>
+                <p style="margin-top: 20px; font-weight: bold; color: #007bff;">Kami siap melayani kebutuhan industri, sekolah, dan masyarakat umum!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> TEFA SMKN 1 Gondang Nganjuk. Dibuat dengan semangat Teaching Factory.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set Tahun Otomatis di Footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Script untuk smooth scroll (membuat navigasi antar section lebih halus)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
